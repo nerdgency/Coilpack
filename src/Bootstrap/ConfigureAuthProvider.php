@@ -58,7 +58,7 @@ class ConfigureAuthProvider
             'provider' => 'coilpack',
         ]);
 
-        app('config')->set('auth.providers.members', [
+        app('config')->set('auth.providers.coilpack', [
             'driver' => 'coilpack',
             'model' => $this->getMemberModel(),
         ]);
