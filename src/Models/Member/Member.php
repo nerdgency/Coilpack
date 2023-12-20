@@ -3,13 +3,13 @@
 namespace Expressionengine\Coilpack\Models\Member;
 
 use Expressionengine\Coilpack\FieldtypeManager;
-use Expressionengine\Coilpack\Model;
 use Expressionengine\Coilpack\Models\Channel\ChannelEntry;
 use Expressionengine\Coilpack\Models\FieldContent;
 use Expressionengine\Coilpack\Models\Permission\Permission;
 use Expressionengine\Coilpack\Models\Role;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Member
@@ -18,7 +18,7 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
  * provided by the Member module.  This is a single user of
  * the website.
  */
-class Member extends Model implements AuthorizableContract
+class Member extends Authenticatable implements AuthorizableContract
 {
     use Authorizable;
 
