@@ -21,7 +21,6 @@ class CoilpackUserProvider implements UserProvider
     }
 
     public function retrieveByCredentials(array $credentials) {
-        logger(implode(' --- ', $credentials));
         $check = array_key_exists('username', $credentials) ? 'username' : 'email';
         $check = $credentials[$check];
 
